@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #242333;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+.movie-container{
+    margin: 20px 0px;
+}
+.movie-container select{
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
