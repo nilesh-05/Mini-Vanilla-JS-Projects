@@ -6,8 +6,25 @@ const movieSelect = document.getElementById('movie')
 
 let ticketPrice = parseInt(movieSelect.value)   //to get ticket price 
 
+function setMovieData(movieIndex, moviePrice) {
+    localStorage.setItem('selectedMovieIndex', movieIndex)
+    localStorage.setItem('selectedMoviePrice',moviePrice)
+}
+
 function updateCount() {
     const selectedSeats = document.querySelectorAll('.row .seat.selected')
+
+    //copy selected seats into array.
+    //Map through an array
+    //return  new array indexes
+    //map method returns an array. forEach doesn't return anything
+    const seatsIndex = [...selectedSeats].map(function (seat) {
+        return [...seats].indexOf(seat)
+    })
+    // console.log(seats)
+    localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex))
+
+
     // console.log(selectedSeats)
     const seatCount = selectedSeats.length  
 
@@ -17,7 +34,8 @@ function updateCount() {
 
 //movie change event 
 movieSelect.addEventListener('change', e => {
-    ticketPrice = parseInt(e.target.value)
+    ticketPrice = +e.target.value
+    setMovieData(e.target.selectedIndex ,  e.target.value)
     updateCount()
 })
 
