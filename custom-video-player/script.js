@@ -31,7 +31,7 @@ function updateProgress() {
 	if (seconds < 10)
 		seconds = '0' + String(seconds)
 	
-	timestamp.innerHTML = `${mins}:${seconds}`
+	timestamp.innerHTML = `${min}:${seconds}`
 }
 
 function setVideoProgress() {
