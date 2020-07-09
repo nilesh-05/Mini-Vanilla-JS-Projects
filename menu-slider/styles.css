@@ -13,6 +13,12 @@
 body{
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
+	transition: transform 0.3s  ease-in-out;
+}
+
+body .show-nav{
+	/* width of nav */
+	transform: translate(200px);
 }
 
 nav {
@@ -111,7 +117,7 @@ button:focus{
 
 .modal-container{
 	background-color: rgba(0,0,0,0.6);
-	/* display: none; */
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
